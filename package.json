@@ -1,0 +1,21 @@
+{
+  "name": "bun-rsc",
+  "module": "src/index.ts",
+  "devDependencies": {
+    "@types/react-dom": "^18.2.18",
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "dev": "bun --hot run src/index.ts"
+  },
+  "type": "module",
+  "dependencies": {
+    "react": "experimental",
+    "react-dom": "experimental",
+    "react-server-dom-webpack": "experimental",
+    "serve-static-bun": "^0.5.3"
+  }
+}
