@@ -3,13 +3,16 @@
   "module": "src/index.ts",
   "devDependencies": {
     "@types/react-dom": "^18.2.18",
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "concurrently": "^8.2.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "dev": "bun --hot run src/index.ts"
+    "dev": "bun --hot run src/index.ts",
+    "start": "bun run src/index.ts",
+    "sigsegv": "concurrently 'bun run src/index.ts' 'sleep 1 && curl -sIXGET http://localhost:3000/build/_client.js'"
   },
   "type": "module",
   "dependencies": {
